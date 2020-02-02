@@ -1,4 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Speedgolf App in React
+This speedgolf app will be developed in class from weeks 4 through 7. It will
+ultimately possess all of the functionality of the app you developed for IA#3,
+including he ability to to add, edit and delete data records.
+
+Note: This project was bootstrapped with [Create React
+App](https://github.com/facebook/create-react-app). 
+
+The following info was auto-inserted into this readme by create-react-app:
 
 ## Available Scripts
 
