@@ -3,14 +3,14 @@ import React from 'react';
 class LoginPage extends React.Component {
     render() {
         return(
-        <div id="loginModeDiv" className="paddedPage">
+        <div id="login-mode-div" className="padded-page">
         <center>
             <h1 />
             <form id="loginInterface">
             <label htmlFor="emailInput" style={{ padding: 0, fontSize: 24 }}>
                 Email:
                 <input
-                className="form-control logintext"
+                className="form-control login-text"
                 type="email"
                 placeholder="Enter Email Address"
                 id="emailInput"
@@ -22,10 +22,9 @@ class LoginPage extends React.Component {
             <label htmlFor="passwordInput" style={{ padding: 0, fontSize: 24 }}>
                 Password:
                 <input
-                className="form-control logintext"
+                className="form-control login-text"
                 type="password"
                 placeholder="Enter Password"
-                id="passwordInput"
                 pattern="[A-Za-z0-9!@#$%^&*()_+\-]+"
                 required={true}
                 />
@@ -33,16 +32,15 @@ class LoginPage extends React.Component {
             <p className="bg-danger" id="feedback" style={{ fontSize: 16 }} />
             <button
                 type="submit"
-                id="loginBtn"
-                className="btncolortheme btn btn-primary btn-block loginbtn">
-                <span id="loginBtnIcon" className="fa fa-sign-in"/>
+                className="btn-color-theme btn btn-primary btn-block login-btn">
+                <span id="login-btn-icon" className="fa fa-sign-in"/>
                 &nbsp;Log In
             </button>
             <br />
-            <a role="button" className="loginBtn">
+            <a role="button" className="login-btn">
                 <img src="https://drive.google.com/uc?export=view&id=1YXRuG0pCtsfvbDSTzuM2PepJdbBpjEut" />
             </a>
-            <a role="button" className="loginBtn">
+            <a role="button" className="login-btn">
                 <img src="https://drive.google.com/uc?export=view&id=1ZoySWomjxiCnC_R4n9CZWxd_qXzY1IeL" />
             </a>
             <p>

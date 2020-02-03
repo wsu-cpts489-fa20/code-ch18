@@ -1,3 +1,6 @@
+/* INDEX.CSS -- The style definitions for the Speedgolf App. These are imported
+  in index.css for the entire app. */
+
 /* Styling of the fixed top bar in the app */
 .navbar {
   overflow: hidden; /* Don't allow scrolling */
@@ -12,22 +15,22 @@
   z-index: 100; /* Force it to be on top */
 }
 
-.navbartitle {
+.navbar-title {
 color: white;
 font-size: 18px;
 }
 
 /* navbarItems defines styling of items within navbar. They should be centered top-to-bottom
  with a small internal margin */
-.navbarItems {
+.navbar-items {
 display: inline-flex; 
 align-items: center; 
 padding-top: 5px; 
 padding-bottom: 5px;
 }
 
-/* sidenav -- Styling of the side navigation menu */
-.sidenav {
+/* sidemenu -- Styling of the side navigation menu */
+.sidemenu {
   height: 100%; /* Menu is full height of window */
   width: 0; /* Menu hidden -- will be opened on click */
   position: fixed; /* Menu stays in place regardless of other content */
@@ -41,7 +44,7 @@ padding-bottom: 5px;
 }
 
 /* applies only to an anchor tag that's a child of a sidenav element. */
-.sidenav a {
+.sidemenu a {
       padding: 16px 8px 16px 32px;
       text-decoration: none;
       font-size: 16px;
@@ -51,7 +54,7 @@ padding-bottom: 5px;
   }
   
 
-.sidenav div {
+.sidemenu div {
       padding: 0px 0px 10px 6px;
       text-decoration: none;
       font-size: 16px;
@@ -63,12 +66,12 @@ padding-bottom: 5px;
 
 /* Required ordering of link style definitions: visited, hover, active. If out of this order, they won't work!! */
 
-.sidenav a:visited {
+.sidemenu a:visited {
 background-color:  #13294E !important;
 color: white !important;
 }
 
-.sidenav a:active {
+.sidemenu a:active {
 background-color:  #13294E !important;
 color: white !important;
 }
@@ -76,7 +79,7 @@ color: white !important;
 
 /* Cascading style within a style: This definition applies only to sidenavtitle class defined in an 
  element that's a child of sidenav element. */   
-.sidenav .sidenavtitle {
+.sidenmenu .sidemenu-title {
       position: absolute;
       width:100%;
       top: 0px;
@@ -88,18 +91,18 @@ color: white !important;
       border-bottom: 2px solid white;
  }
 
- .sidenav .sidenavuserID {
+ .sidemenu .sidemenu-userID {
    font-size: 14px;
  }
 
 /* side menu button styling */
-.menubtn {
+.sidemenu-btn {
 background-color: transparent;
 border-color: #13294E;
 text-align: center;
 }
 
-.menubtnicon {
+.sidemenu-btn-icon {
 color: white;
 font-size: 30px;
 cursor: pointer;
@@ -107,7 +110,7 @@ text-align: center;
 }
 
 
-.menuItem:hover {
+.sidemenu-item:hover {
   cursor: default;
   text-decoration: none;
   color: #13294E !important;
@@ -115,7 +118,7 @@ text-align: center;
 }
 
 /* side menu styling when menu item selected */
-.menuItemSelected {
+.sidemenu-item-selected {
        pointer-events: none;
        cursor: default;
        text-decoration: none;
@@ -124,13 +127,13 @@ text-align: center;
 }
 
 /* The SpeedScore dark blue color theme  */       
-.btncolortheme {
+.btn-color-theme {
       background-color: #13294E;
       color: white;
   }
   
 /* The color theme when a bottom bar menu item is selected */
-.btnaltcolortheme {
+.btn-alt-color-theme {
       background-color: #F0F0F0;
       color: #13294E;
   }
@@ -141,14 +144,14 @@ color: gray;
 }
   
 
-.btncolorthemeoutline {
+.btn-color-theme-outline {
       border: 2px;
       border-color: #13294E;
       color: #13294E;
 }
 
 /* Styling for the divs in the app. Ensures that the content at top isn't obscured by top bar */
-.paddedPage {
+.padded-page {
 padding: 56px 8px 0px 8px;
 
 }
@@ -193,8 +196,7 @@ color: #13294E;
 
 /* Add a gray background color to button when it is hovered */
 .modebar a:hover {
-background-color: #F0F0F0;
-color: #13294E;
+  color: #F0F0F0;
 }
 
 /* Hide the link that should open and close the navbar on small screens */
@@ -203,19 +205,19 @@ display: none;
 } 
 
 /* Style the icons in the bottom bar */
-.modebaricon {
+.modebar-icon {
 display:block; 
 padding-top:3px;
 }
 
 /* Style the text in the bottom bar */
-.modebartext {
+.modebar-text {
 display:block;
 font-size: small;
 }
 
 /* Style the floating action button, which is fixed in the lower right of the app */
-.float{
+.floatbtn {
 position:fixed;
 width:60px;
 height:60px;
@@ -228,15 +230,15 @@ text-align:center;
 box-shadow: 2px 2px 3px #999;
 }
 
-.my-float{
+.floatbtn-icon{
 margin-top:22px;
 }
 
-.floatBtnDiv a:visited {
+.floatbtn a:visited {
 color: white !important;
 }
 
-.floatBtnDiv a:active {
+.floatbtn a:active {
 color: white !important;
 }
 
@@ -245,28 +247,28 @@ margin: 0;
 }
 
 /* This class disables a button */
-.disabledButton {
+.disabled-button {
 pointer-events: none;
 opacity: 0.4;
 }
 
-.floatButton a:visited {
+.floatbtn a:visited {
 color: white !important;
 }
 
-.floatButton a:active {
+.floatbtn a:active {
 color: white !important;
 }
 
 /* Login page styling */
-.logintext {
+.login-text {
 text-align: center;
 width: 90%;
 height: 10%;
 font-size: 24px;
 }
 
-.loginbtn {
+.login-btn {
 width: 70%;
 font-size: 36px;
 }
