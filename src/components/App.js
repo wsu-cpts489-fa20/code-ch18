@@ -11,7 +11,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {mode: AppMode.LOGIN,
-                  menuOpen: false};
+                  menuOpen: false,;
+                  userId: ""};
   }
 
   handleChangeMode = (newMode) => {
@@ -30,6 +31,9 @@ class App extends React.Component {
     this.setState(prevState => ({menuOpen: !prevState.menuOpen}));
   }
 
+  setUserId = (Id) => {
+    this.setState({userId: Id});
+  }
 
   render() {
     return (
@@ -50,7 +54,8 @@ class App extends React.Component {
         <FloatingButton 
           mode={this.state.mode}
           menuOpen={this.state.menuOpen}/>
-        <LoginPage changeMode={this.handleChangeMode}/>
+        <LoginPage changeMode={this.handleChangeMode}
+                   setUserId={this.setUserId}/>
       </div>
       );  
 }
