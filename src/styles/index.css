@@ -32,7 +32,7 @@ padding-bottom: 5px;
 /* sidemenu -- Styling of the side navigation menu */
 .sidemenu {
   height: 100%; /* Menu is full height of window */
-  width: 0; /* Menu hidden -- will be opened on click */
+  width: 0px; /* Menu hidden -- will be opened on click */
   position: fixed; /* Menu stays in place regardless of other content */
   z-index: 150; /* Force the menu to be at front */
   top: 48px; /* Position menu 48 px from top of screen; accomodates top navbar */
@@ -40,7 +40,7 @@ padding-bottom: 5px;
   background-color: #13294E; /* Background color is dark blue */
   overflow-x: hidden; /* Don't allow horizontal scroll */
   transition: 0.5s; /* Animation transition time is 0.5 sec */
-  padding-top: 60px; /* Place menu content 60 px from top */
+  padding-top: 12px; /* Place menu content 12 px from top */
 }
 
 /* applies only to an anchor tag that's a child of a sidenav element. */

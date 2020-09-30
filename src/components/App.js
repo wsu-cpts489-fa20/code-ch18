@@ -52,8 +52,7 @@ class App extends React.Component {
           toggleMenuOpen={this.toggleMenuOpen}/>
         <SideMenu 
           mode={this.state.mode}
-          menuOpen={this.state.menuOpen}
-          changeMode={this.handleChangeMode}/>
+          toggleMenuOpen={this.toggleMenuOpen}/>
         <ModeBar 
           mode={this.state.mode} 
           changeMode={this.handleChangeMode}
