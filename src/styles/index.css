@@ -278,3 +278,28 @@ font-size: 36px;
 .form-center {
 text-align: center;
 }
+
+/* Make an item visible */
+.visible {
+  display: block;
+}
+
+/* Make an item invisible */
+.invisible {
+ display: none;
+}
+
+/* Styles selected side menu items and bottom bar buttons */
+.item-selected {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: #13294E !important;
+  background-color: #F0F0F0;
+}
+
+/* Forces element to ignore pointer events like clicks */
+.ignore-click {
+  pointer-events: none;
+}
+

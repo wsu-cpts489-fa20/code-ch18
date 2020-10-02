@@ -5,6 +5,9 @@ import ModeBar from './ModeBar.js';
 import FloatingButton from './FloatingButton.js';
 import LoginPage from './LoginPage.js';
 import AppMode from "./../AppMode.js"
+import FeedPage from './FeedPage.js';
+import RoundsPage from './RoundsPage.js';
+import CoursesPage from './CoursesPage.js';
 
 const modeTitle = {};
 modeTitle[AppMode.LOGIN] = "Welcome to SpeedScore";
@@ -12,6 +15,11 @@ modeTitle[AppMode.FEED] = "Activity Feed";
 modeTitle[AppMode.ROUNDS] = "My Rounds";
 modeTitle[AppMode.COURSES] = "Courses";
 
+const modeToPage = {};
+modeToPage[AppMode.LOGIN] = LoginPage;
+modeToPage[AppMode.FEED] = FeedPage;
+modeToPage[AppMode.ROUNDS] = RoundsPage;
+modeToPage[AppMode.COURSES] = CoursesPage;
 
 class App extends React.Component {
 
@@ -43,6 +51,7 @@ class App extends React.Component {
   }
 
   render() {
+    const ModePage = modeToPage[this.state.mode];
     return (
       <div>
         <NavBar title={modeTitle[this.state.mode]} 
@@ -60,8 +69,10 @@ class App extends React.Component {
         <FloatingButton 
           mode={this.state.mode}
           menuOpen={this.state.menuOpen}/>
-        <LoginPage changeMode={this.handleChangeMode}
-                   setUserId={this.setUserId}/>
+        <ModePage menuOpen={this.state.menuOpen}
+          changeMode={this.handleChangeMode}
+          setUserId={this.setUserId}/>
+          )
       </div>
       );  
 }
