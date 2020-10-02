@@ -72,7 +72,6 @@ class App extends React.Component {
         <ModePage menuOpen={this.state.menuOpen}
           changeMode={this.handleChangeMode}
           setUserId={this.setUserId}/>
-          )
       </div>
       );  
 }
