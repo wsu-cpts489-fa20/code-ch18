@@ -56,7 +56,6 @@ class App extends React.Component {
       <div>
         <NavBar title={modeTitle[this.state.mode]} 
           mode={this.state.mode}
-          changeMode={this.handleChangeMode}
           menuOpen={this.state.menuOpen}
           toggleMenuOpen={this.toggleMenuOpen}/>
         <SideMenu 
