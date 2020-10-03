@@ -1,4 +1,5 @@
 import React from 'react';
+import AppMode from '../AppMode';
 
 class NavBar extends React.Component {
     
@@ -6,8 +7,8 @@ class NavBar extends React.Component {
        return (
         <div className="navbar">  
         <span className="navbar-items">
-          <button className="sidemenu-btn">
-            <span id="menuBtnIcon" className="fa fa-bars sidemenu-btn-icon">
+          <button className="sidemenu-btn" onClick={this.props.mode != AppMode.LOGIN ? this.props.toggleMenuOpen : null}>
+            <span id="menuBtnIcon" className={"sidemenu-btn-icon " + (this.props.menuOpen ? "fa fa-times" : "fa fa-bars")}>
             </span>
           </button>
           <img src="http://tiny.cc/sslogo" alt="Speed Score Logo" height="38px"
