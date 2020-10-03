@@ -44,7 +44,8 @@ renderModeMenuItems = () => {
 
     render() {
        return (
-        <div className={"sidemenu " + (this.props.menuOpen ? "sidemenu-open" : "sidemenu-closed")}>
+        <div className={"sidemenu " + (this.props.menuOpen ? "sidemenu-open" : "sidemenu-closed")}
+             onClick={this.props.toggleMenuOpen}>
           {/* SIDE MENU TITLE */}
           <div className="sidemenu-title">
               <img src='http://tiny.cc/chrisprofilepic' height='50' width='50' />
