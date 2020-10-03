@@ -126,6 +126,17 @@ text-align: center;
        background-color: #F0F0F0;
 }
 
+/* set width to 250px when menu is open */
+.sidemenu-open {
+  width: 250px;
+}
+
+/* set width to 0px when menu is closed */
+.sidemenu-closed {
+  width: 0px;
+}
+
+
 /* The SpeedScore dark blue color theme  */       
 .btn-color-theme {
       background-color: #13294E;
