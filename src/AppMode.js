@@ -4,6 +4,8 @@ const AppMode = {
     LOGIN: "LoginMode",
     FEED: "FeedMode",
     ROUNDS: "RoundsMode",
+    ROUNDS_LOGROUND: "RoundsMode-LogRound",
+    ROUNDS_EDITROUND: "RoundsMode-EditRound",
     COURSES: "CoursesMode"
 };
 
