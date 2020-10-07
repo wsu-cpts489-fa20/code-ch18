@@ -230,6 +230,7 @@ font-size: small;
 /* Style the floating action button, which is fixed in the lower right of the app */
 .floatbtn {
 position:fixed;
+cursor: pointer;
 width:60px;
 height:60px;
 bottom:60px;

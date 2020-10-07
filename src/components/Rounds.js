@@ -3,6 +3,10 @@
 //appropriate rounds mode page based on App's mode, which is passed in as a prop.
 
 import React from 'react';
+import AppMode from './../AppMode.js';
+import RoundsTable from './RoundsTable.js';
+import RoundForm from './RoundForm.js';
+import FloatingButton from './FloatingButton.js';
 
 class Rounds extends React.Component {
 
@@ -10,6 +14,11 @@ class Rounds extends React.Component {
     constructor(props) {
             super(props);
             let data = JSON.parse(localStorage.getItem(this.props.userId)); 
+            if (data == null) { //no data yet for this user -- create empty record
+                data = {rounds: [],
+                        roundCount: 0};  
+                localStorage.setItem(this.props.userId,JSON.stringify(data));
+            }
             this.state = {rounds: data.rounds,
                           roundCount: data.roundCount,
                           deleteId: "",

@@ -1,4 +1,5 @@
 import React from 'react';
+import AppMode from './../AppMode.js';
 
 class RoundsTable extends React.Component {
 
@@ -10,6 +11,18 @@ class RoundsTable extends React.Component {
   editRound = (id) => {
     this.props.setEditId(id);
     this.props.changeMode(AppMode.ROUNDS_EDITROUND);
+  }
+
+  //confirmDelete -- Triggered when the user clicks the delete button
+  //for a given round. The id paam is the unique property that 
+  //identifies the round. Set the state variable representing the id
+  //of the round to be deleted and then present a dialog box asking
+  //the user to confirm the deletion.
+  //TO DO: Implement the confirmation dialog box. For now, we
+  //present alert box placeholder
+  confirmDelete = (id) => {
+    this.props.setDeleteId(id);
+    alert("Confirm Delete Goes here!");
   }
 
 
@@ -45,7 +58,7 @@ class RoundsTable extends React.Component {
   //Rounds Logged" message in case the table is empty.
   render() {
     return(
-    <div className="paddedPage">
+    <div className="padded-page">
       <h1></h1>
       <table className="table table-hover">
         <thead className="thead-light">
