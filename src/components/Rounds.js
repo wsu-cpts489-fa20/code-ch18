@@ -15,7 +15,7 @@ class Rounds extends React.Component {
             super(props);
             let data = JSON.parse(localStorage.getItem(this.props.userId)); 
             if (data == null) { //no data yet for this user -- create empty record
-                data = {rounds: [],
+                data = {rounds: {},
                         roundCount: 0};  
                 localStorage.setItem(this.props.userId,JSON.stringify(data));
             }
@@ -30,8 +30,7 @@ class Rounds extends React.Component {
     //the mode back to AppMode.ROUNDS since the user is done adding a round.
     addRound = (newData) => {
         let data = JSON.parse(localStorage.getItem(this.props.userId));
-        newData.roundNum = ++data.roundCount;
-        data.rounds.push(newData);
+        data.rounds[++data.roundCount] = newData;
         localStorage.setItem(this.props.userId, JSON.stringify(data));
         this.setState({rounds: data.rounds, roundCount: data.roundCount});
         this.props.changeMode(AppMode.ROUNDS);
