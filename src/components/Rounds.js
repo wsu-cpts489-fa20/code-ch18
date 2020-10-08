@@ -26,7 +26,8 @@ class Rounds extends React.Component {
         }
 
     //addRound -- Given an object newData containing a new round, add the round
-    //to the current user's list of rounds, commit to local storage, and toggle
+    //to the current user's list of rounds, incremeting roundCount to ensure
+    //the round id is unique. Then commit to local storage and toggle
     //the mode back to AppMode.ROUNDS since the user is done adding a round.
     addRound = (newData) => {
         let data = JSON.parse(localStorage.getItem(this.props.userId));
