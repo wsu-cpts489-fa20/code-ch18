@@ -69,7 +69,8 @@ class App extends React.Component {
             menuOpen = {this.state.menuOpen}
             mode={this.state.mode}
             toggleMenuOpen={this.toggleMenuOpen}
-            userId={this.state.userId}/>
+            userId={this.state.userId}
+            logOut={() => this.handleChangeMode(AppMode.LOGIN)}/>
           <ModeBar 
             mode={this.state.mode} 
             changeMode={this.handleChangeMode}
