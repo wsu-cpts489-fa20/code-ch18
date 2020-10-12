@@ -373,3 +373,8 @@ text-align: center;
   width: 70%;
   font-size: 24px;
   }
+
+  .emphasis {
+    color: black;
+    background-color: lightgray;
+  }
