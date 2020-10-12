@@ -227,7 +227,7 @@ class CreateAccountDialog extends React.Component {
         </div>
     </div>
     );
-  }
-}
+    }
+    }
 
 export default CreateAccountDialog;

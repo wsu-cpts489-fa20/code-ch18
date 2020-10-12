@@ -1,5 +1,6 @@
 import React from 'react';
 import CreateAccountDialog from './CreateAccountDialog.js';
+import ResetPasswordDialog from './ResetPasswordDialog.js';
 import AppMode from "./../AppMode.js";
 
 class LoginPage extends React.Component {
@@ -12,8 +13,8 @@ constructor() {
     this.state = {newAccountCreated: false,
                   loginBtnIcon: "fa fa-sign-in",
                   loginBtnLabel: "Log In",
-                  showAccountDialog: false,
-                  showPasswordDialog: false,
+                  showCreateAccountDialog: false,
+                  showResetPasswordDialog: false,
                   };
 } 
     
@@ -69,13 +70,13 @@ handleLoginChange = () => {
   //with new credentials.
   newAccountCreated = () => {
       this.setState({newAccountCreated: true,
-                     showAccountDialog: false});
+                     showCreateAccountDialog: false});
   }
 
   //cancelCreateAccount -- Called by child CreateAccountDialog componenet when user decides
   //to cancel creation of new account by clicking the "X" in top-right of dialog.
   cancelCreateAccount = () => {
-      this.setState({showAccountDialog: false});
+      this.setState({showCreateAccountDialog: false});
   }
 
   render() {
@@ -118,19 +119,21 @@ handleLoginChange = () => {
             </button>
             <p>
             <button type="button" className="btn btn-link login-link" 
-                    onClick={() => {this.setState({showAccountDialog: true});}}>
+                    onClick={() => {this.setState({showCreateAccountDialog: true});}}>
                 Create an account</button> | 
                 <button type="button" className="btn btn-link login-link"
-                        onClick={() => {this.setState({showPasswordDialog: true});}}>
+                        onClick={() => {this.setState({showResetPasswordDialog: true});}}>
                 Reset your password</button>
             </p>  
             <p>
                 <i>Version CptS 489</i>
             </p>
             </form>
-            {this.state.showAccountDialog ? <CreateAccountDialog 
-                                               newAccountCreated={this.newAccountCreated}
-                                               cancelCreateAccount={this.cancelCreateAccount} /> : null}
+            {this.state.showCreateAccountDialog ? 
+              <CreateAccountDialog 
+                newAccountCreated={this.newAccountCreated}
+                cancelCreateAccount={this.cancelCreateAccount} /> : null}
+            {this.state.showResetPasswordDialog ? <ResetPasswordDialog /> : null}
         </center>
         </div>
         )
